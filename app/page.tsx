@@ -193,7 +193,9 @@ export default function Home() {
             </details>
 
             <a
-              href="mailto:mohamadelayyan84@gmail.com"
+              href="https://wa.me/962770376117?text=Hi%20Mohammad%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect."
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-gradient-to-r from-violet-600 to-blue-600 px-3 py-2 text-[11px] font-semibold shadow-lg shadow-violet-600/20 transition hover:scale-105 sm:px-5 sm:py-2.5 sm:text-sm"
             >
               Let&apos;s Talk →
