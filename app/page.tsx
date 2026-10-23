@@ -68,7 +68,7 @@ export default function Home() {
       icon: "LLM",
       title: "LLMs, RAG & AI Automation",
       subtitle: "Local AI, retrieval and intelligent workflows",
-      technologies: ["LangChain","Ollama","RAG","ChromaDB","Embeddings","Vector Search","AI Agents","n8n","Tool Calling","Prompt Engineering","Webhooks","APIs"],
+      technologies: ["LangChain","Ollama","RAG","MCP","BGE-M3","ChromaDB","Embeddings","Vector Search","AI Agents","n8n","Tool Calling","Prompt Engineering","Webhooks","APIs"],
     },
     {
       icon: "ROS",
@@ -87,6 +87,15 @@ export default function Home() {
   const featuredProjects = [
     {
       number: "01",
+      title: "AI Knowledge MCP Server",
+      description: "Local-first multilingual MCP server for PDF, TXT and Markdown document processing, BGE-M3 embeddings, ChromaDB semantic search, and MCP tools, resources and prompts. Includes 25 passing tests and validated Linux CI and Docker image build.",
+      technologies: ["MCP", "BGE-M3", "ChromaDB", "PyTorch", "Python", "PyTest"],
+      github: "https://github.com/MohammadElayyan117/AI-Knowledge-MCP-Server",
+      image: "/projects/mcp-showcase.svg",
+      imageAlt: "AI Knowledge MCP Server multilingual retrieval architecture",
+    },
+    {
+      number: "02",
       title: "Local Multi-Document RAG Assistant",
       description: "Fully local multi-document RAG application with document ingestion, chunking, embeddings, vector retrieval, local LLM answering, and evaluation.",
       technologies: ["RAG","LangChain","Ollama","ChromaDB","Streamlit"],
@@ -95,7 +104,7 @@ export default function Home() {
       imageAlt: "Local Multi-Document RAG Assistant interface",
     },
     {
-      number: "02",
+      number: "03",
       title: "Noor — AI Arabic Tutor",
       description: "AI-powered Arabic language tutor for autistic children combining speech, computer vision, animated interaction, embedded hardware, and hybrid edge-cloud AI.",
       technologies: ["AI","Computer Vision","NVIDIA Jetson","Embedded","Edge-Cloud"],
@@ -104,7 +113,7 @@ export default function Home() {
       imageAlt: "Noor AI Arabic Tutor prototype",
     },
     {
-      number: "03",
+      number: "04",
       title: "AI Invoice OCR & Validation",
       description: "AI workflow that extracts invoice data from images, converts it into structured JSON, and validates totals, tax, currency, and item values.",
       technologies: ["OCR","Vision AI","n8n","JavaScript","Automation"],
@@ -113,7 +122,7 @@ export default function Home() {
       imageAlt: "AI invoice OCR and validation workflow with invoice result",
     },
     {
-      number: "04",
+      number: "05",
       title: "Local AI English Speaking Coach",
       description: "Local conversational English coach using browser speech recognition, Ollama, conversation memory, text-to-speech, and configurable correction modes.",
       technologies: ["LLM","Ollama","n8n","Speech","AI Agent"],
@@ -517,9 +526,9 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Row 1 — RAG + Noor: equal visual weight */}
+          {/* Row 1 — MCP + RAG */}
           <div className="mt-7 grid gap-4 lg:grid-cols-2">
-            {/* RAG */}
+            {/* MCP */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-violet-400/20 bg-[#0c1321] shadow-[0_25px_80px_-55px_rgba(139,92,246,0.8)]">
               <div className="relative h-44 overflow-hidden sm:h-64 xl:h-72">
                 <Image
@@ -533,13 +542,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1321] via-[#0c1321]/10 to-transparent" />
                 <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-200 backdrop-blur-xl">
                   <span className="h-2 w-2 rounded-full bg-violet-400" />
-                  Flagship • Local AI
+                  MCP • Multilingual AI
                 </div>
               </div>
 
               <div className="p-5 sm:p-6">
                 <span className="text-xs font-bold tracking-[0.28em] text-violet-400/75">
-                  01 / RAG
+                  01 / MCP
                 </span>
                 <h3 className="mt-3 text-2xl font-extrabold leading-tight lg:text-3xl">
                   {featuredProjects[0].title}
@@ -565,12 +574,75 @@ export default function Home() {
                       Focus
                     </p>
                     <p className="mt-1 text-xs font-medium text-zinc-300">
-                      Retrieval • Local LLMs • Evaluation
+                      MCP Tools • Semantic Search • BGE-M3
                     </p>
                   </div>
 
                   <a
                     href={featuredProjects[0].github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 transition hover:bg-violet-500/20"
+                    aria-label="View MCP project"
+                  >
+                    ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            {/* RAG */}
+            <article className="group overflow-hidden rounded-[1.75rem] border border-violet-400/20 bg-[#0c1321] shadow-[0_25px_80px_-55px_rgba(139,92,246,0.8)]">
+              <div className="relative h-44 overflow-hidden sm:h-64 xl:h-72">
+                <Image
+                  src={featuredProjects[1].image}
+                  alt={featuredProjects[1].imageAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center transition duration-700 group-hover:scale-[1.02]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1321] via-[#0c1321]/10 to-transparent" />
+                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-200 backdrop-blur-xl">
+                  <span className="h-2 w-2 rounded-full bg-violet-400" />
+                  Flagship • Local AI
+                </div>
+              </div>
+
+              <div className="p-5 sm:p-6">
+                <span className="text-xs font-bold tracking-[0.28em] text-violet-400/75">
+                  02 / RAG
+                </span>
+                <h3 className="mt-3 text-2xl font-extrabold leading-tight lg:text-3xl">
+                  {featuredProjects[1].title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-400">
+                  {featuredProjects[1].description}
+                </p>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {featuredProjects[1].technologies.map((technology) => (
+                    <span
+                      key={technology}
+                      className="rounded-full border border-violet-400/15 bg-violet-400/[0.06] px-2.5 py-1 text-[11px] font-medium text-violet-100"
+                    >
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-5 flex items-end justify-between border-t border-white/10 pt-4">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600">
+                      Focus
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-zinc-300">
+                      Retrieval • Local LLMs • Evaluation
+                    </p>
+                  </div>
+
+                  <a
+                    href={featuredProjects[1].github}
                     target="_blank"
                     rel="noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-violet-400/30 bg-violet-500/10 text-violet-200 transition hover:bg-violet-500/20"
@@ -582,12 +654,16 @@ export default function Home() {
               </div>
             </article>
 
+          </div>
+
+          {/* Row 2 — Noor + Invoice */}
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
             {/* Noor — same size / hierarchy as RAG */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-blue-400/20 bg-[#0c1321] shadow-[0_25px_80px_-55px_rgba(59,130,246,0.65)]">
               <div className="relative h-44 overflow-hidden sm:h-64 xl:h-72">
                 <Image
-                  src={featuredProjects[1].image}
-                  alt={featuredProjects[1].imageAlt}
+                  src={featuredProjects[2].image}
+                  alt={featuredProjects[2].imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center transition duration-700 group-hover:scale-[1.025]"
@@ -601,17 +677,17 @@ export default function Home() {
 
               <div className="p-5 sm:p-6">
                 <span className="text-xs font-bold tracking-[0.28em] text-blue-400/75">
-                  02 / MULTIMODAL AI
+                  03 / MULTIMODAL AI
                 </span>
                 <h3 className="mt-3 text-2xl font-extrabold leading-tight lg:text-3xl">
-                  {featuredProjects[1].title}
+                  {featuredProjects[2].title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-400">
-                  {featuredProjects[1].description}
+                  {featuredProjects[2].description}
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {featuredProjects[1].technologies.map((technology) => (
+                  {featuredProjects[2].technologies.map((technology) => (
                     <span
                       key={technology}
                       className="rounded-full border border-blue-400/15 bg-blue-400/[0.06] px-2.5 py-1 text-[11px] font-medium text-blue-100"
@@ -632,7 +708,7 @@ export default function Home() {
                   </div>
 
                   <a
-                    href={featuredProjects[1].github}
+                    href={featuredProjects[2].github}
                     target="_blank"
                     rel="noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-200 transition hover:bg-blue-500/20"
@@ -643,17 +719,13 @@ export default function Home() {
                 </div>
               </div>
             </article>
-          </div>
-
-          {/* Row 2 — OCR is intentionally larger than Coach and More Work */}
-          <div className="mt-4 grid gap-4 lg:grid-cols-2 xl:grid-cols-[1.45fr_0.9fr_0.7fr]">
             {/* OCR — strongest card on row 2 */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-cyan-400/20 bg-[#0c1321] shadow-[0_20px_70px_-55px_rgba(34,211,238,0.7)] lg:col-span-2 xl:col-span-1">
               <div className="grid h-full md:grid-cols-[1.15fr_0.85fr] xl:block 2xl:grid 2xl:grid-cols-[1.15fr_0.85fr]">
                 <div className="relative h-44 min-h-0 overflow-hidden sm:h-auto sm:min-h-[280px] xl:h-48 xl:min-h-0 2xl:h-auto 2xl:min-h-[300px]">
                   <Image
-                    src={featuredProjects[2].image}
-                    alt={featuredProjects[2].imageAlt}
+                    src={featuredProjects[3].image}
+                    alt={featuredProjects[3].imageAlt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-center transition duration-700 group-hover:scale-[1.03]"
@@ -667,17 +739,17 @@ export default function Home() {
 
                 <div className="flex flex-col justify-center p-5 sm:p-6">
                   <span className="text-[11px] font-bold tracking-[0.22em] text-cyan-400/80">
-                    03 / AI AUTOMATION
+                    04 / AI AUTOMATION
                   </span>
                   <h3 className="mt-2 text-2xl font-bold">
-                    {featuredProjects[2].title}
+                    {featuredProjects[3].title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-zinc-400">
-                    {featuredProjects[2].description}
+                    {featuredProjects[3].description}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-1.5">
-                    {featuredProjects[2].technologies.map((technology) => (
+                    {featuredProjects[3].technologies.map((technology) => (
                       <span
                         key={technology}
                         className="rounded-full border border-white/10 bg-white/[0.035] px-2.5 py-1 text-[10px] text-zinc-300"
@@ -688,7 +760,7 @@ export default function Home() {
                   </div>
 
                   <a
-                    href={featuredProjects[2].github}
+                    href={featuredProjects[3].github}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-5 inline-flex w-fit items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
@@ -699,12 +771,16 @@ export default function Home() {
               </div>
             </article>
 
+          </div>
+
+          {/* Row 3 — English Coach + More Engineering Work */}
+          <div className="mt-4 grid gap-4 lg:grid-cols-2">
             {/* English Coach — smaller than OCR */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-emerald-400/15 bg-[#0c1321]">
               <div className="relative h-32 overflow-hidden sm:h-40">
                 <Image
-                  src={featuredProjects[3].image}
-                  alt={featuredProjects[3].imageAlt}
+                  src={featuredProjects[4].image}
+                  alt={featuredProjects[4].imageAlt}
                   fill
                   sizes="(max-width: 1280px) 50vw, 28vw"
                   className="object-cover object-top transition duration-700 group-hover:scale-[1.025]"
@@ -718,17 +794,17 @@ export default function Home() {
 
               <div className="p-5">
                 <span className="text-[10px] font-bold tracking-[0.2em] text-emerald-400/75">
-                  04 / SPEECH + LLM
+                  05 / SPEECH + LLM
                 </span>
                 <h3 className="mt-2 text-xl font-bold">
-                  {featuredProjects[3].title}
+                  {featuredProjects[4].title}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-400">
-                  {featuredProjects[3].description}
+                  {featuredProjects[4].description}
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-1.5">
-                  {featuredProjects[3].technologies.map((technology) => (
+                  {featuredProjects[4].technologies.map((technology) => (
                     <span
                       key={technology}
                       className="rounded-full border border-white/10 bg-white/[0.035] px-2.5 py-1 text-[10px] text-zinc-300"
@@ -739,7 +815,7 @@ export default function Home() {
                 </div>
 
                 <a
-                  href={featuredProjects[3].github}
+                  href={featuredProjects[4].github}
                   target="_blank"
                   rel="noreferrer"
                   className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-semibold text-emerald-300 transition hover:text-emerald-200"
@@ -756,7 +832,7 @@ export default function Home() {
                   More Engineering Work
                 </p>
                 <h3 className="mt-3 text-xl font-bold">
-                  Beyond the Featured Four
+                  Beyond the Featured Five
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-zinc-400">
                   OpenSooq AI Agent, ROS2 obstacle avoidance, autonomous robotics,

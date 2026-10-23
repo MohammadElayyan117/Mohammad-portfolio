@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-label="AI Knowledge MCP Server illustration">
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b0c24"/><stop offset=".52" stop-color="#14113a"/><stop offset="1" stop-color="#071d34"/></linearGradient>
+<linearGradient id="neo" x2="1" y2="1"><stop stop-color="#c084fc"/><stop offset=".5" stop-color="#7367ff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="640" fill="url(#bg)"/>
+<g fill="none" stroke="#8764ff" stroke-opacity=".35" stroke-width="2">
+<path d="M110 126H388L504 256M95 428H394L504 353M836 298H1020V180M836 342H1044V465"/>
+</g>
+<g fill="#151b42" stroke="#7959e8" stroke-width="3"><rect x="56" y="74" width="285" height="140" rx="18"/><rect x="56" y="367" width="285" height="154" rx="18"/><rect x="889" y="75" width="264" height="153" rx="18"/><rect x="889" y="384" width="264" height="144" rx="18"/></g>
+<g fill="#e4e6ff" font-family="Arial,sans-serif" font-weight="bold"><text x="85" y="118" font-size="29">DOCUMENTS</text><text x="88" y="157" font-size="20" fill="#adbdff">PDF · TXT · MD</text><text x="83" y="419" font-size="28">MCP TOOLS</text><text x="83" y="457" font-size="20" fill="#adbdff">Resources · Prompts</text><text x="917" y="123" font-size="30">BGE-M3</text><text x="917" y="165" font-size="19" fill="#c2caff">Multilingual embeddings</text><text x="918" y="434" font-size="28">ChromaDB</text><text x="918" y="474" font-size="20" fill="#a9f4ff">Semantic search</text></g>
+<g filter="url(#glow)"><rect x="428" y="210" width="360" height="208" rx="32" fill="#110e35" stroke="url(#neo)" stroke-width="7"/><path d="M480 272H734M480 350H734" stroke="#6d62f7" stroke-opacity=".4" stroke-width="2"/></g>
+<text x="608" y="310" font-size="91" font-family="Arial,sans-serif" font-weight="900" fill="#e7daff" text-anchor="middle">MCP</text>
+<text x="608" y="377" font-size="26" font-family="Arial,sans-serif" fill="#67e8f9" text-anchor="middle">AI KNOWLEDGE SERVER</text>
+<g fill="#9bfaff" filter="url(#glow)"><circle cx="397" cy="258" r="7"/><circle cx="397" cy="353" r="7"/><circle cx="834" cy="300" r="7"/><circle cx="834" cy="342" r="7"/></g>
+</svg>
